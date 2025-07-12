@@ -90,10 +90,18 @@
       kdePackages.kate
     #  thunderbird
     ];
+    shell = pkgs.zsh;
+    useDefaultShell = true;
   };
+
+  # zsh shell for all users
+  users.defaultUserShell = pkgs.zsh;
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Install zsh.
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -108,8 +116,11 @@
      vivaldi
      git
      telegram-desktop  
-     vscode 
+     vscode
+     zsh
+     neofetch
 ];
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
