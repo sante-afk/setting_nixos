@@ -76,7 +76,7 @@
     #media-session.enable = true;
   };
 
-  #Video Driver
+  # Video Driver
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -103,6 +103,9 @@
 
   # Install zsh.
   programs.zsh.enable = true;
+  
+  # Install amnezia 
+  programs.amnezia-vpn.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -125,6 +128,8 @@
      linuxKernel.packages.linux_zen.amneziawg
      amneziawg-go
      amneziawg-tools
+     amnezia-vpn
+     discord
 ];
 
 
